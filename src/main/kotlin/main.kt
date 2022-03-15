@@ -11,11 +11,9 @@ fun main() {
 fun printLikes(likes: Int) {
     if (likes == 0) {
         println("Никому не понравилось ((")
-    } else if (likes % 100 == 11) {
+    } else if (likes % 100 == 11 || likes % 10 != 1) {
         println("Понравилось $likes людям")
     } else if (likes == 1 || ((likes % 10) == 1)) {
         println("Понравилось $likes человеку")
-    } else {
-        println("Понравилось $likes  людям")
     }
 }
