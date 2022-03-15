@@ -1,11 +1,21 @@
 fun main() {
-    val likes = 38
+    printLikes(0)
+    printLikes(1)
+    printLikes(11)
+    printLikes(21)
+    printLikes(56)
+}
 
-    if (likes == 1) {
-        print("Понравилось $likes человеку")
-    } else if ((likes % 2) > 0) {
-        print("Понравилось $likes человекам")
+fun printLikes(likes: Int) {
+    if (likes == 0) {
+        println("Никому не понравилось ((")
+    } else if (likes == 1) {
+        println("Понравилось $likes человеку")
+    } else if (likes == 11 || likes == 111) {
+        println("Понравилось $likes людям")
+    } else if (((likes % 10) == 1)) {
+        println("Понравилось $likes человеку")
     } else {
-        print("Понравилось $likes людям")
+        println("Понравилось $likes  людям")
     }
 }
